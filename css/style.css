@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+button:focus {
+    outline: none;
+}
+
+.f-dir-col {
+    flex-direction: column;
+}
+
+/* Home Section */
+
+.home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/bg/bg.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: #ffffff;
+}
+
+.big-hero {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.big-hero h1 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.big-hero p {
+    font-size: 15px;
+}
+
+.big-hero button {
+    display: inline-block;
+    margin-top: 50px;
+    background-color: #b82c3d;
+    padding: 10px 20px;
+    border: 1px solid #963843;
+    cursor: pointer;
+    transition: all .2s ease;
+    letter-spacing: 1px;
+}
+
+.big-hero button a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.big-hero button:hover {
+    background-color: #963843;
+}
+
+/* Books section */
+
+.books-section {
+    padding: 80px 0 20px;
+}
+
+.books-section .book-item {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+    padding: 15px;
+}
+
+.books-section .book-item-inner {
+    overflow: hidden;
+    position: relative;
+}
+
+.books-section .book-item-inner img {
+    width: 100%;
+    display: block;
+    filter: grayscale(0);
+    transition: all .5s ease;
+}
+
+.books-section .book-item:hover .book-item-inner:hover img {
+    filter: grayscale(50%);
+}
+
+.books-section .book-item-inner .overlay {
+    text-align: center;
+    padding: 20px 5px;
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    transition: all 1s ease;
+    opacity: 1;
+}
+
+.books-section .book-item:hover .book-item-inner .overlay {
+    top: 0;
+}
+
+.books-section .book-item-inner .overlay .overlay-inner {
+    margin: auto;
+}
+
+.books-section .book-item-inner .overlay .overlay-inner p {
+    margin: 30px 0 20px;
+    text-align: left;
+}
+
+/* Contatct Section  */
+
+.contact-section {
+    padding: 50px 0;
+    background-color: #f3f2f1;
+}
+
+.section-title {
+    margin-left: 15px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.section-title h1 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.contact-section .contact-form {
+    margin-top: 20px;
+}
+
+.contact-section .contact-form .form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.contact-section .contact-form .form .form-control {
+    /* background-color: royalblue; */
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+
+
+.contact-section .contact-form .form .form-control label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+
+.contact-section .contact-form .form .form-control input,
+.contact-section .contact-form .form .form-control textarea{
+    border: 1px solid #555555;
+    padding: 10px;
+    display: block;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.contact-section .contact-form .form .form-control.success input {
+    border-color: #2ecc71;
+}
+
+
+.contact-section .contact-form .form .form-control.error input {
+    border-color: #e74c3c;
+}
+
+.contact-section .contact-form .form .form-control i {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-20%);
+    visibility: hidden;
+}
+
+.contact-section .contact-form .form .form-control.success i.fa-check-circle {
+    visibility: visible;
+    color: #2ecc71;
+}
+
+.contact-section .contact-form .form .form-control.error i.fa-exclamation-circle {
+    visibility: visible;
+    color: #e74c3c;
+}
+
+.contact-section .contact-form .form .form-control small {
+    position: absolute;
+    bottom: -10px;
+    font-size: 13px;
+    left: 0;
+    visibility: hidden;
+}
+
+.contact-section .contact-form .form .form-control.error small {
+    visibility: visible;
+    color: #e74c3c;
+}
+
+.contact-section .contact-form .form .form-control textarea {
+    resize: none;
+    height: 120px;
+}
+
+.contact-section .contact-form .form .form-btn {
+    margin-top: 5px;
+}
+.contact-section .contact-form .form .form-btn button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #b82c3d;
+    border: 1px solid #b82c3d;
+    cursor: pointer;
+    transition: all .3s ease;
+    color: #fff;
+    font-size: 16px;
+} 
+
+.contact-section .contact-form .form .form-btn button:hover {
+    background-color: #963843;
+}
+
+
+
+
+/* Media Query */
+
+@media(max-width: 767px) {
+    .books-section .book-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 15px;
+    }
+    .contact-section .contact-form .form {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 575px) {
+    .books-section .book-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
+}
